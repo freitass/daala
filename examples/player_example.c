@@ -412,7 +412,7 @@ int player_example_play(player_example *player) {
             player->height = player->di.pic_height;
             player->screen = SDL_CreateWindow("Daala example player",
                 SDL_WINDOWPOS_UNDEFINED, SDL_WINDOWPOS_UNDEFINED,
-                player->width, player->height,
+                player->width, player->height, SDL_WINDOW_RESIZABLE |
                 SDL_WINDOW_ALLOW_HIGHDPI);
             if (player->screen == NULL) return -1;
             player->renderer = SDL_CreateRenderer(player->screen, -1, 0);
